@@ -1,0 +1,282 @@
+body{
+    background-image: url('https://i.ibb.co/xjrTntr/UT-YCC-1.jpg');
+    display:  block;
+    margin: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#header{
+    display:  block;
+}
+.main_name{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color:  #fff;
+  
+}
+
+.sub_name{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    
+}
+
+#box {
+   
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    width:  300px;
+    height: auto;
+    background-color: #fff;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    transition: transform 0.3s;
+    
+}
+
+#z-box{
+
+    width: 300px;
+        height: auto;
+        background-color: #fff;
+        justify-content: center;
+        align-self: center;
+        border-radius: 20px;
+        align-items: center;
+        margin: auto;
+        padding: auto;
+        transition: transform 0.3s;
+}
+
+#box:hover,#z-box:hover{
+    transform: scale(1.05);
+}
+
+.name-input,.birth-input,.num-input{
+    
+    background-color: #e9ecef;
+    margin-bottom: 10px;
+    height: 40px;
+    border-radius: 20px;
+   
+    border: none;
+    padding: 10px;
+    width: 200px;
+    transition: box-shadow 0.1s ease-in-out;
+    
+}
+
+.name-input::placeholder,.birth-input::placeholder,.num-input::placeholder{
+    
+    font-size: 11px;
+   
+ 
+    
+}
+
+
+.name-input:hover,
+.birth-input:hover,.num-input:hover {box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.check{
+    font-size: 11px;
+    color: #fff;
+    
+}
+.check,.z-check,.get-num{
+    background-color: #0077b6;
+    margin-bottom: 10px;
+    
+    border-radius: 20px;
+    text-align: center; 
+    border: none;
+    padding: 10px;
+    transition: box-shadow 0.1s ease-in-out;
+
+
+}
+.check:hover,.z-check:hover,.get-num:hover{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.get-num{
+    margin-bottom: 30px;
+}
+
+.num-panel{
+    background-color: #E7C6FF;
+        margin-bottom: 10px;
+        height: 110px;
+        border-radius: 20px;
+        text-align: center;
+        border: none;
+        padding: 10px;
+        margin: 20px;
+        transition: box-shadow 0.1s ease-in-out;
+        justify-content: center;
+    }
+.num-panel:hover{
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#svg-overlay{
+    position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1;
+     
+}
+
+.woman-img{
+    width: 50%;
+    height: 50%;
+}
+
+.dream-img {
+    width: 73%;
+    height: 73%;
+}
+.cat-img{
+    width: 80%;
+    height: 80%;
+}
+.main-container{
+    display: flex;
+    flex: 1;
+    
+    align-items: center;
+    justify-content: center;
+    
+ 
+}
+.rand_num{
+    text-align: center;
+    font-family: 'Oxygen', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 15px;
+}
+
+#result,#z_result{
+    display: none;
+    width: 300px;
+    height: auto;
+    background-color: #fff;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+
+.prediction-text,.z-text{
+    text-align: center;
+    padding: 30px;
+    font-weight: bold;
+    font-family: 'Oxygen', sans-serif;
+}
+
+.loading,.z_loading{
+    display: none;
+}
+
+.lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+}
+
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #E7C6FF;
+    border-color: #E7C6FF  transparent #E7C6FF transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media screen and (max-width: 912px) {
+    body {
+        display: block;
+ 
+    }
+    .main_name{
+        font-size: 50px;
+    }
+
+    .main-container{
+        display: block;
+        margin: 40px;
+        block-size: 1;
+    }
+    #box,#z-box,#result,#z_result{
+        margin-bottom: 30px;
+    }
+    #svg-overlay{
+        width: 200%;
+    }
+    .footer{
+        height: 10%;
+    }
+   
+
+
+@media screen and (min-width: 1200px) {
+    body {
+       display: block;
+       
+       
+       
+    }
+    #box,#result,#z-box,#z_result{
+        margin-top: 30px;
+    }
+    #header{
+        display: block;
+        margin: 80px;
+       
+    }
+}
+
+
+}
+
+.footer {
+    opacity: 40%;
+    position:relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+    
+    font-family: 'Oxygen', sans-serif;
+    text-align: center;
+}
