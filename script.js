@@ -9,7 +9,7 @@ function check(){
    var subject = document.getElementById('subjects').value;
    var month = document.getElementById('months').value;
    var abs = document.getElementById("abs-input").value;
-   if (!isNaN(abs) && abs.trim() !== "") {
+   if (!isNaN(abs) && abs.trim() !== "" && abs <= 30) {
 
       var rollCall_result;
       var sessions = getSession(subject,month);
@@ -205,6 +205,10 @@ function calculateRollCallPercentage(attended, total) {
    if (percentage > 100) {
       return 100 + '%';
    }
+   if (percentage < 0) {
+      return 0 + '%';
+   }
+   
    return percentage.toFixed(2) + '%'; // Return percentage rounded to two decimal places
 }
 
