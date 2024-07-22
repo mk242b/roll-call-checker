@@ -9,7 +9,7 @@ function check(){
    var subject = document.getElementById('subjects').value;
    var month = document.getElementById('months').value;
    var abs = document.getElementById("abs-input").value;
-   if (!isNaN(abs) && abs.trim() !== "" && abs <= 30) {
+   if (!isNaN(abs) && abs.trim() !== "" && abs <= 30 && abs >= 0) {
 
       var rollCall_result;
       var sessions = getSession(subject,month);
