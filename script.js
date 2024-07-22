@@ -225,31 +225,7 @@ function returnToIndex(){
    document.getElementById("loading").style.display = "none";
    document.getElementById("check").style.display = "inline-block";
 }
-function get_a_Number(){
-   var nameLen = document.getElementById("name-input").value.length;
-   var age = 2023 - document.getElementById("birth-input").value;
-   var luckNum = document.getElementById("num-input").value;
-   var average = Math.round((nameLen + parseInt(luckNum) + age)/3);
-   var random_avg = Math.random(0,average);
-   console.log(random_avg);
-   return random_avg;
-}
 
-function getRandomPrediction(){
-   randomNum = get_a_Number();
-    var randomIndex = Math.floor(randomNum * Predictions.length);
-    
-    var prediction=  Predictions[randomIndex];
-    
-    return prediction;
-}
-
-function getRand_num(){
-   var min = 100;
-   var max = 999;
-   var rand_num = Math.floor(Math.random() * (max - min) + min);
-   document.getElementById("rand_num").textContent = String(rand_num);
-}
 function delay_check(){
    document.getElementById("loading").style.display = "block";
    document.getElementById("check").style.display = "none";
